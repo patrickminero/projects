@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize Portfolio</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    
+    <link rel="stylesheet" href="style/style.css">      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+</head>
+<body>
+    <header>
+        <nav class="nav-wrapper" id="home">
+            <div class="container">
+                <ul class="hide-on-med-and-down">
+                    <li><a class="white-text waves-effect waves-teal" href="#about">About</a></li>
+                    <li><a class="white-text waves-effect waves-teal" href="#gallery">Gallery</a></li>
+                    <li><a class="white-text waves-effect waves-teal" href="#projects">Projects</a></li>
+                </ul>
+                <a id="menu-btn" class="sidenav-trigger right btn-flat waves-effect waves-light show-on-medium-and-up" data-target="mobile-links" style="margin: 0;">
+                    <i class="large material-icons pink-text" style="font-size: 48px">menu</i>
+                </a>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-links">
+            <div class="section center-align">
+                <img src="media/hamed-foroutan-8WsfFDuK1l0-unsplash.jpg" alt="" class="responsive-image circle center-align">
+                <p class="flow-text"><i class="material-icons indigo-text">call</i>+34 678 9876</p>
+                <p class="flow-text"><i class="material-icons indigo-text">location_on</i>Barcelona, Spain</p>
+                <div class="social container">
+                    <a href="#"><span class="iconify black-text" data-icon="ant-design:github-filled" data-inline="false"></span></span></a>
+                    <a href="#"><span class="iconify black-text" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify black-text" data-icon="ant-design:instagram-filled" data-inline="false"></span></a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <li><a class="black-text waves-effect" href="#home"><span class="menu-items">Home</span><i class="material-icons blue-text">home</i></a></li>
+                <li><a class="black-text waves-effect" href="#about"><span class="menu-items">About</span><i class="material-icons red-text">person</i></a></li>
+                <li><a class="black-text waves-effect" href="#gallery"><span class="menu-items">Gallery</span><i class="material-icons yellow-text">extension</i></a></li>
+                <li><a class="black-text waves-effect" href="#projects"><span class="menu-items">Projects</span><i class="material-icons green-text">code</i></a></li>
+            </div>
+            <div class="divider"></div>
+            <div class="section container">
+                <div id="form-div">
+                    <form action="POST" name="contact" id="contact">
+                        <input type="text" name="name" id="" placeholder="Your Name..." class="input-field">
+                        <input type="email" name="email" id="email" placeholder="Your Email..." class="input-field">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." class="materialize-textarea"></textarea>
+                        <button type="submit" id="submit" class="btn waves-effect waves-light purple darken-1 white-text">Send Message<i class="material-icons right">send</i></button>
+                    </form>
+                </div>
+            </div>
+
+        </ul>
+    </header>
+    <main>
+        <div class="section" id="main">
+            <div class="container">
+                <h1 class="white-text">I'M John Doe,</h1>
+                <h2 class="white-text hide-on-small-only">I BUILD WEB APPLICATIONS</h2>
+                <h4 class="white-text hide-on-med-and-up">I BUILD WEB APPLICATIONS</h4>
+            </div>
+            
+        </div>
+        
+        <div class="section" id="about">
+            <div class="container">
+                <h3>I am a photographer based in Barcelona, Spain.</h3>
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, consequatur?</h4>
+                <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officiis nulla, laborum in dignissimos dolore cumque itaque debitis possimus. Quia, nemo consequuntur? Odit illum veritatis illo excepturi sapiente ducimus eligendi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iusto, expedita eos enim esse suscipit accusantium accusamus reiciendis, vero, praesentium odio harum atque eligendi! Aperiam corrupti animi ut laborum aspernatur.</p>><br>
+                <p class="flow-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto odio veritatis magni officia, minima repellat laboriosam nemo dolorum deleniti modi. Alias obcaecati soluta fugiat recusandae explicabo cum quod, ut porro? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, voluptatibus delectus optio corrupti assumenda distinctio voluptatem perspiciatis cum iusto quod labore officia earum vitae, eligendi vel dignissimos, in voluptate veniam.</p>
+                <div class="divider"></div>
+            </div>
+        </div>
+
+        <div class="carousel carousel-slider" id="gallery">
+            <a class="carousel-item" href="#one!"><img src="media/benjamin-rascoe-vTUk4cUL1k8-unsplash.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="media/erik-ringsmuth-d3a6KbEmsE8-unsplash.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="media/erik-ringsmuth-OUvmngJoaSY-unsplash.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="media/luke-watkinson-LnccqluSxNw-unsplash.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="media/conner-bowe-I7UjBrOzPMQ-unsplash.jpg"></a>
+          </div>
+
+        <div class="section container row center-align" id="projects">
+            <h2>Projects</h2>
+            <div class="container offset-m2 col s12 m8 l6 xl4 center-align">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/ben-FM5MM0_cWZk-unsplash.jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text text-darken-4">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn btn-flat white">Visit Page</a>
+                        <a href="#" class="btn btn-flat white">View Source</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, animi!</p>
+                    </div>           
+                </div>
+            </div>
+
+            <div class="container offset-m2 col s12 m8 l6 xl4">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/neonbrand-zj_saLHazwk-unsplash.jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text text-darken-4">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn btn-flat white ">Visit Page</a>
+                        <a href="#" class="btn btn-flat white ">View Source</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, dolor.</p>
+                    </div>           
+                </div>
+            </div>
+
+            <div class="container col offset-m2 s12 m8 l6 xl4">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/tyler-casey-R5zkwqHVyYo-unsplash.jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text ">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="" class="btn btn-flat white">Visit Page</a>
+                        <a href="" class="btn btn-flat white">View Source</a>
+                    </div>
+                    <div class="card-reveal container">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, possimus!</p>
+                    </div>           
+                </div>
+            </div>
+            <div class="container offset-m2 col s12 m8 l6 xl4 center-align">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/jakob-owens-EXf5DjXytZE-unsplash (1).jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text text-darken-4">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn btn-flat white">Visit Page</a>
+                        <a href="#" class="btn btn-flat white">View Source</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, animi!</p>
+                    </div>           
+                </div>
+            </div>
+            <div class="container offset-m2 col s12 m8 l6 xl4 center-align">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/soragrit-wongsa-aV5xrpB0bwQ-unsplash (1).jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text text-darken-4">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn btn-flat white">Visit Page</a>
+                        <a href="#" class="btn btn-flat white">View Source</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, animi!</p>
+                    </div>           
+                </div>
+            </div>
+            <div class="container offset-m2 col s12 m8 l6 xl4 center-align">
+                <div class="card sticky-action hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img src="media/reinhart-julian-WxM465oM4j4-unsplash (1).jpg" alt=""class="activator">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator black-text text-darken-4">Project</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#" class="btn btn-flat white">Visit Page</a>
+                        <a href="#" class="btn btn-flat white">View Source</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title black-text text-darken-4">Project<i class="material-icons right">close</i></span>
+                        <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, animi!</p>
+                    </div>           
+                </div>
+            </div>
+        </div>
+        
+                
+</main>
+<footer class="page-footer pink">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 center-align" id="social-icons">
+          <ul>
+              <li><a href="#"><span class="iconify white-text" data-icon="ant-design:github-filled" data-inline="false"></span></a></li>
+              <li><a href="#"><span class="iconify white-text" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a></li>
+              <li><a href="#"><span class="iconify white-text" data-icon="ant-design:instagram-filled" data-inline="false"></span></a></li>          
+          </ul>   
+        </div>
+        <div class="col l6 s12" id="links">
+          <ul>
+            <li><a class="white-text flow-text" href="#home">Home</a></li>
+            <li><a class="white-text flow-text" href="#about">About</a></li>
+            <li><a class="white-text flow-text" href="#gallery">Gallery</a></li>
+            <li><a class="white-text flow-text" href="#projects">Projects</a></li>
+            <li><a class="white-text flow-text sidenav-trigger" data-target="mobile-links" href="#projects">Contact</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <h5 class="center-align white-text">Icons created by <a href="iconify.com" class="white-text">Iconify </a>- Written with love in Barcelona, Spain</h5>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          M.AutoInit();
+
+        $('document').ready(function(){
+  $('.sidenav').sidenav({
+    edge: 'left',
+    inDuration: 600,
+    outDuration: 600,
+  })
+})
+$(document).ready(function(){
+    $('.parallax').parallax();
+})
+
+let sidenav = $('.sidenav');
+let instance = M.Sidenav.getInstance(sidenav);
+
+$(document).ready(function(){
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+    });
+  });
+    </script>
+</body>
+</html>
