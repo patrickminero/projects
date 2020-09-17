@@ -7,7 +7,7 @@ const assets = [
     'styles/style.css',
     'media/medal.svg',
     'https://kit.fontawesome.com/8631d0c616.js',
-    'https://cdn.jsdelivr.net/npm/vue/dist/vue.js',
+    'https://cdn.jsdelivr.net/npm/vue@2.6.12',
     'manifest.json',
     'https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap',
     'https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2',
