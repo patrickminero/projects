@@ -1,7 +1,7 @@
 {
     "name": "To Do List App",
     "short_name": "My List",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#333652",
     "theme_color": "#333652",
