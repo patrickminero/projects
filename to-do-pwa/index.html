@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <meta name="theme-color" content="#333652">
+  <link rel="canonical" href="https://patrickminero.github.io/projects/to-do-pwa/"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8631d0c616.js" crossorigin="anonymous"></script>
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <!--IOS support-->
+  <link rel="apple-touch-icon" href="media/icons/maskable_icon.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#333652">
+  <title>To Do App - Minimalist Desing</title>
+</head>
+<body>
+  <main id="app">
+    <!--Div only shows when all task completed-->
+    <div id="modal" v-show="completed">
+      <div>
+        <img src="media/medal.svg" alt="icon of medal" title="Icons made by Freepik at www.flaticon.com">
+        <h1>Great job! You finished all your task for today</h1>
+        <button id="modal-button" v-on:click="displayNone">
+          <i class="far fa-times-circle fa-5x"></i>
+        </button>
+      </div>
+    </div>
+
+    <header>
+      <div id="greeting">
+        <h1 v-if="greeting < 12">Good Morning</h1>
+        <h1 v-else-if="greeting < 18">Good Afternoon</h1>
+        <h1 v-else="greeting">Good Evening</h1>
+        <h2>{{ date }}</h2>
+        <p v-once>{{ getQuote() }}</p>
+      </div>
+    </header>
+
+    <section id="display-section">
+      <div id="display-container" v-if="itemList.length > 0">
+          <div id="list-div" v-for="(item, index) in itemList">
+            <div id="item-div">
+              <button id="check" v-if="item.pending" v-on:click="changeStatus(item, index)"><i class="far fa-square"></i></button>
+              <button id="check" v-if="!item.pending" v-on:click="changeStatus(item, index)"><i class="far fa-check-square"></i></button>
+              <input type="text" v-if="item.disabled"  v-model="item.name" v-bind:class="{ completed: !item.pending, pending: item.pending }" disabled>
+              <input type="text" v-if="!item.disabled" v-model="item.name" v-bind:class="{ completed: !item.pending, pending: item.pending }" autofocus>
+              <button id="edit" v-on:click="editItem(item, index)"><i class="fas fa-pencil-alt"></i></button>
+              <button id="delete"><i class="far fa-trash-alt" v-on:click="deleteItem(item, index)"></i></button>
+            </div>
+          </div>
+        </div>
+        <button id="reset-btn" v-on:click="resetList" v-if="itemList.length > 0">
+          <i class="fas fa-times fa-2x"></i>
+          <p>Clear All</p>
+        </button>
+    </section>
+
+    <section id="input-section">
+      <div id="input-div">
+        <input type="text" id="input" placeholder="Let's get things done!" v-model="item" v-on:keyup.enter="addItem" autofocus maxlength="50"/>
+        <button type="submit" v-on:click.enter="addItem"><i class="fas fa-plus"></i></button>
+      </div>
+    </section>
+
+  </main>
+  
+<script src="scripts/vue.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

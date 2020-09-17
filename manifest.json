@@ -1,0 +1,58 @@
+{
+    "name": "To Do List App",
+    "short_name": "My List",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#333652",
+    "theme_color": "#333652",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "media/icons/icon72.png",
+            "sizes": "72x72",
+            "type": "image/png"            
+        },
+        {
+            "src": "media/icons/icon_96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "media/icons/icon_128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "media/icons/icon_144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "media/icons/icon_152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "media/icons/icon_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "media/icons/icon_384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "media/icons/icon_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },   
+        {
+            "src": "media/icons/maskable_icon.png",
+            "type":"image/png",
+            "sizes": "202X202",
+            "purpose": "any maskable"
+        } 
+    ]
+
+}

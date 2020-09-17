@@ -1,0 +1,333 @@
+@media only screen and (min-device-width: 320px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+  }
+  #app {
+    overflow: scroll;
+    background-color: #333652;
+    color: #E9EAEC;
+    height: 100%;
+  }
+  #modal {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    opacity: .9;
+    background-color: black;
+    z-index: 5;
+  }
+  #modal div {
+    width: 100%;
+    display: block;
+    margin: auto;
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  #modal img {
+    width: 15em;
+    height: 15em;
+    display: block;
+    margin: auto;
+  }
+  #modal h1 {
+    width: 90%;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+  #modal button {
+    width: 7em;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: block;
+    margin: auto;
+    color: white;
+    padding-top: 2em;
+  }
+  header {
+    height: 30%;
+    width: 100%;
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  header h1, header h2 {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 1.2em;
+    text-align: center;
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  #display-section {
+    height: 60%;
+    width: 100%;
+    overflow: scroll;
+  }
+  #display-section #reset-btn {
+    color: #E9EAEC;
+    background-color: transparent;
+    border: 3px solid #E9EAEC;
+    outline: none;
+    position: relative;
+    font-size: .6em;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    line-height: 1;
+  }
+  #display-section::-webkit-scrollbar {
+    display: none;
+  }
+  #display-section #display-container {
+    width: 90%;
+    display: block;
+    margin: auto;
+    background-color: #FAD02C;
+    height: auto;
+    padding: .5em;
+  }
+  #display-section #display-container #list-div {
+    width: 100%;
+    height: 2em;
+    display: block;
+    margin: auto;
+    background-color: #E9EAEC;
+    -webkit-box-shadow: 2px 2px 2px #333652;
+            box-shadow: 2px 2px 2px #333652;
+  }
+  #display-section #display-container #list-div:hover {
+    -webkit-box-shadow: 4px 4px 4px #333652;
+            box-shadow: 4px 4px 4px #333652;
+  }
+  #display-section #display-container #list-div #item-div {
+    margin: .5em 0;
+    padding: 0.3em;
+    width: 100%;
+    height: 100%;
+  }
+  #display-section #display-container #list-div #item-div button {
+    display: inline;
+    color: #44444C;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+  #display-section #display-container #list-div #item-div .pending {
+    color: #44444C;
+    width: 50%;
+    background-color: transparent;
+    font-size: 1.3em;
+    outline-color: #44444C;
+    border: none;
+    cursor: pointer;
+  }
+  #display-section #display-container #list-div #item-div .completed {
+    color: #44444C;
+    width: 50%;
+    background-color: transparent;
+    text-decoration: line-through;
+    font-size: 1.3em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  #display-section #display-container #list-div #item-div #edit, #display-section #display-container #list-div #item-div #delete {
+    float: right;
+    margin-right: .3em;
+  }
+  #input-section {
+    height: 10%;
+    width: 100%;
+    color: #E9EAEC;
+  }
+  #input-section div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #90ADC6;
+  }
+  #input-section div:hover, #input-section div:active {
+    background-color: #859fac;
+  }
+  #input-section div input {
+    width: 85%;
+    padding-left: .5em;
+  }
+  #input-section div input::-webkit-input-placeholder {
+    color: white;
+  }
+  #input-section div input:-moz-placeholder {
+    color: white;
+  }
+  #input-section div input::-moz-placeholder {
+    color: white;
+  }
+  #input-section div input:-ms-input-placeholder {
+    color: white;
+  }
+  #input-section div button {
+    width: 10%;
+    height: 100%;
+  }
+  #input-section div button, #input-section div input {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 0;
+    font-size: 1.5em;
+  }
+  #input-section div input, #input-section div button {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (min-device-width: 480px) {
+  header {
+    height: 25%;
+  }
+  header h2 {
+    font-size: 2.5em;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 1.5em;
+  }
+  #display-section {
+    height: 65%;
+  }
+  #display-section #reset-btn {
+    line-height: 1.5;
+  }
+  #display-section #display-container #list-div #item-div {
+    padding: .2em;
+  }
+  #display-section #display-container #list-div #item-div button, #display-section #display-container #list-div #item-div .pending, #display-section #display-container #list-div #item-div .completed {
+    color: #333652;
+    font-size: 1.5em;
+  }
+  #input-section {
+    height: 10%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (min-width: 480px) {
+  #app::-webkit-scrollbar {
+    display: none;
+  }
+  header {
+    height: 25%;
+  }
+  header h2 {
+    font-size: 2.5em;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 1.2em;
+  }
+  #display-section {
+    height: 65%;
+  }
+  #display-section #reset-btn {
+    line-height: 1.5;
+  }
+  #display-section #display-container #list-div #item-div {
+    padding: .2em;
+  }
+  #display-section #display-container #list-div #item-div button, #display-section #display-container #list-div #item-div .pending, #display-section #display-container #list-div #item-div .completed {
+    color: #333652;
+    font-size: 1.5em;
+  }
+  #input-section {
+    height: 10%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (min-width: 768px) {
+  body, html {
+    background-color: #333652;
+  }
+  #app {
+    width: 768px;
+    margin: auto;
+    display: block;
+  }
+  #app::-webkit-scrollbar {
+    display: none;
+  }
+  #app #modal {
+    width: 768px;
+  }
+  #app #modal div {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  #app header {
+    height: 25%;
+  }
+  #app header h2 {
+    font-size: 2.5em;
+    margin: auto;
+  }
+  #app header h1 {
+    font-size: 3.5em;
+  }
+  #app header p {
+    font-size: 1.2em;
+    width: 90%;
+  }
+  #app #display-section {
+    height: 65%;
+  }
+  #app #display-section #reset-btn {
+    line-height: 1.5;
+  }
+  #app #display-section #display-container #list-div #item-div {
+    padding: .2em;
+  }
+  #app #display-section #display-container #list-div #item-div button, #app #display-section #display-container #list-div #item-div .pending, #app #display-section #display-container #list-div #item-div .completed {
+    color: #333652;
+    font-size: 1.5em;
+  }
+  #app #display-section #display-container #list-div #item-div .pending, #app #display-section #display-container #list-div #item-div .completed {
+    width: 80%;
+  }
+  #app #input-section {
+    height: 10%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

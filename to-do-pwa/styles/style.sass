@@ -1,0 +1,272 @@
+$darkBlue: #333652
+$greyBlue: #90ADC6
+$Yellow: #FAD02C
+$lightGray: #E9EAEC
+    
+@mixin center($pro, $arg)
+    margin: auto
+    display: block
+    width: $arg
+    text-align: center
+@mixin placeholder-color($color) 
+    &::-webkit-input-placeholder  /* WebKit browsers */
+        color: $color
+    
+    &:-moz-placeholder /* Mozilla Firefox 4 to 18 */
+        color: $color
+    
+    &::-moz-placeholder /* Mozilla Firefox 19+ */
+        color: $color
+    
+    &:-ms-input-placeholder  /* Internet Explorer 10+ */
+        color: $color
+@media only screen and (min-device-width : 320px)
+    *
+        margin: 0
+        padding: 0
+        box-sizing: border-box
+    html, body
+        width: 100%
+        height: 100%
+        font-family: 'Roboto Condensed', sans-serif
+        &::-webkit-scrollbar 
+            display: none
+    #app
+        overflow: scroll
+        background-color: $darkBlue
+        color: $lightGray
+        height: 100%
+    #modal
+        width: 100%
+        height: 100%
+        display: block
+        position: absolute
+        opacity: .9
+        background-color: black
+        z-index: 5
+        div
+            width: 100%
+            display: block
+            margin: auto
+            transform: translateY(20%)
+        img
+            width: 15em
+            height: 15em
+            display: block
+            margin: auto
+        h1
+            width: 90%
+            text-align: center
+            display: block
+            margin: auto
+        button  
+            width: 7em
+            background-color: transparent
+            outline: none
+            border: none
+            display: block
+            margin: auto
+            color: white
+            padding-top: 2em
+    header
+        height: 30%
+        width: 100%
+        @include center(width, 100%)
+        h1, h2
+            margin: auto
+            text-align: center
+            font-size: 2em
+        h1
+            font-size: 3em
+        p
+            font-size: 1.2em
+            text-align: center
+            width: 90%
+            display: block
+            margin: auto
+    #display-section
+        height: 60%
+        width: 100%
+        overflow: scroll
+        #reset-btn
+            color: $lightGray
+            background-color: transparent
+            border: 3px solid $lightGray
+            outline: none
+            position: relative
+            font-size: .6em
+            border-radius: 50%
+            height: 4rem
+            width: 4rem
+            display: block
+            margin: auto
+            margin-top: 1rem
+            line-height: 1
+        &::-webkit-scrollbar 
+            display: none
+        #display-container
+            width: 90%
+            display: block
+            margin: auto
+            background-color: $Yellow
+            height: auto
+            padding: .5em
+            #list-div
+                width: 100%
+                height: 2em
+                display: block
+                margin: auto
+                background-color: $lightGray
+                box-shadow: 2px 2px 2px $darkBlue
+                &:hover
+                    box-shadow: 4px 4px 4px $darkBlue
+                #item-div
+                    margin: .5em 0
+                    padding: 0.3em
+                    width: 100%
+                    height: 100%
+                    button
+                        display: inline
+                        color: #44444C
+                        background-color: transparent
+                        outline: none
+                        border: none
+                        font-size: 1.3em
+                        cursor: pointer
+                    .pending
+                        color: #44444C
+                        width: 50%
+                        background-color: transparent
+                        font-size: 1.3em
+                        outline-color: #44444C
+                        border: none
+                        cursor: pointer
+                    .completed
+                        color: #44444C
+                        width: 50%
+                        background-color: transparent
+                        text-decoration: line-through
+                        font-size: 1.3em
+                        outline: none
+                        border: none
+                        cursor: pointer
+                    #edit, #delete
+                        float: right
+                        margin-right: .3em
+    #input-section
+        height: 10%
+        width: 100%
+        color: $lightGray
+        div
+            height: 100%
+            width: 100%
+            text-align: center
+            background-color: $greyBlue
+            &:hover, &:active
+                background-color: #859fac
+            input
+                width: 85%
+                padding-left: .5em
+                @include placeholder-color(white)
+            button
+                width: 10%
+                height: 100%
+            button, input
+                background-color: transparent
+                color: white
+                outline: none
+                border: none
+                height: 100%
+                padding: 0
+                font-size: 1.5em
+            input, button
+                height: 100%
+                margin: 0 
+                padding: 0
+    @media only screen and (min-device-width: 480px)
+        header
+            height: 25%
+            h2
+                font-size: 2.5em
+            h1
+                font-size: 3em
+            p
+                font-size: 1.5em
+        #display-section
+            height: 65%
+            #reset-btn
+                line-height: 1.5
+            #display-container
+                #list-div
+                    #item-div
+                        padding: .2em
+                        button, .pending, .completed
+                            color: $darkBlue
+                            font-size: 1.5em
+        #input-section
+            height: 10%
+    @media only screen and (min-width: 480px)
+        #app
+            &::-webkit-scrollbar 
+                display: none
+        header
+            height: 25%
+            h2
+                font-size: 2.5em
+            h1
+                font-size: 3em
+            p
+                font-size: 1.2em
+        #display-section
+            height: 65%
+            #reset-btn
+                line-height: 1.5
+            #display-container
+                #list-div
+                    #item-div
+                        padding: .2em
+                        button, .pending, .completed
+                            color: $darkBlue
+                            font-size: 1.5em
+        #input-section
+            height: 10%
+    @media only screen and (min-width: 768px)
+        body, html
+            background-color: $darkBlue
+        #app
+            width: 768px
+            margin: auto
+            display: block
+            &::-webkit-scrollbar 
+                display: none
+            #modal
+                width: 768px
+                div
+                    transform: translateY(50%)
+            header
+                height: 25%
+                h2
+                    font-size: 2.5em
+                    margin: auto
+
+                h1
+                    font-size: 3.5em
+                p
+                    font-size: 1.2em
+                    width: 90%
+            #display-section
+                height: 65%
+                #reset-btn
+                    line-height: 1.5
+                #display-container
+                    #list-div
+                        #item-div
+                            padding: .2em
+                            button, .pending, .completed
+                                color: $darkBlue
+                                font-size: 1.5em
+                            .pending, .completed
+                                width: 80%
+            #input-section
+                height: 10%
+                
