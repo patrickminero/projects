@@ -1,17 +1,17 @@
-const staticCacheName = 'site-static-v3';
+const staticCacheName = 'site-static-v1';
 const assets = [
     '/',
-    '/index.html',
-    '/scripts/app.js',
-    '/scripts/vue.js',
-    '/styles/style.css',
-    '/media/medal.svg',
+    'index.html',
+    'scripts/app.js',
+    'scripts/vue.js',
+    'styles/style.css',
+    'media/medal.svg',
     'https://kit.fontawesome.com/8631d0c616.js',
     'https://cdn.jsdelivr.net/npm/vue/dist/vue.js',
-    '/manifest.json',
+    'manifest.json',
     'https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap',
     'https://fonts.gstatic.com/s/robotocondensed/v19/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2',
-    '/media/icons/icon_144.png',
+    'media/icons/icon_144.png',
     'https://kit-free.fontawesome.com/releases/latest/css/free.min.css',
     'https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css',
     'https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css',
@@ -22,7 +22,7 @@ const assets = [
 self.addEventListener('install', evt => {
     evt.waitUntil(
         caches.open(staticCacheName).then(cache => {
-            console.log('caching shell assets');
+            // console.log('caching shell assets');
             cache.addAll(assets);
         })
     );

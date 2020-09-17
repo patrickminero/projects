@@ -8,7 +8,7 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "media/icons/icon72.png",
+            "src": "media/icons/icon_72.png",
             "sizes": "72x72",
             "type": "image/png"            
         },
@@ -50,7 +50,7 @@
         {
             "src": "media/icons/maskable_icon.png",
             "type":"image/png",
-            "sizes": "202X202",
+            "sizes": "202x202",
             "purpose": "any maskable"
         } 
     ]
