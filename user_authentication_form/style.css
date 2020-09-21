@@ -76,7 +76,7 @@ input, textarea{
     font-size: 24px;
     color: var(--font);
     border-radius: 15px;
-}
+}z
 #name, #email{
     height: 48px;  
 }
