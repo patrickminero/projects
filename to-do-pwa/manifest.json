@@ -50,7 +50,7 @@
         {
             "src": "media/icons/maskable_icon.png",
             "type":"image/png",
-            "sizes": "202x202",
+            "sizes": "192x192",
             "purpose": "any maskable"
         } 
     ]
