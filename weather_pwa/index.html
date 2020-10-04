@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6f94fa">
+  <link rel="icon" href="media/icons/icon72.png">
+  <link rel="canonical" href="https://patrickminero.github.io/projects/weather-pwa/index.html"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./weather.css">
+  <!--IOS support-->
+  <link rel="apple-touch-icon" href="media/icons/maskable_icon.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#333652">
+  <title>Weather App - Patrick Minero</title>
+  <meta name="description" content="Current, hourly and daily weather tracker application optimized as a PWA to be functional even when offline and downloadable to function as a native application.">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <button id="menu-button">
+            <div id="top"></div>
+            <div id="middle"></div>
+            <div id="bottom"></div>
+        </button>
+        <nav id="side-nav">
+            <ul>
+                <li id="units">
+                    <a href="#">Change to metric</a>
+                </li>
+                <div id="searches">recent searches</div>
+                <li class="recent"></li>
+                <li class="recent"></li>
+                <li class="recent"></li>
+                     
+            </ul>
+          </nav>
+    </header>
+    
+    <div id="location-div">
+        <input type="text" name="city" id="autocomplete" placeholder="Enter Location..." autofocus>
+        <button type="submit" id="submit-button">Go!</button>     
+    </div>
+    <div id="current-weather">
+        <div>
+            <h2 id="city">My city</h2>
+            <img id="current-img" src="media/clear-day.svg" alt="sun icon" title='Icons made by Freepik from www.flaticon.com'>
+            <h1><span id="current-temp"></span></h1>
+            <h2 id="current-desc"></h2>
+            <h3>Feels like: <span id="current-feels"></span> ºC</h3>
+            <h3>Wind: <span id="current-wind"></span> M/H</h3>
+        </div>
+
+    </div>
+
+    <div id="hourly-weather">
+        <h2>hourly</h2>
+    </div>
+       
+    <div id="daily-weather">
+        <h2>daily</h2>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFB6mfKfN0BcDIqg-xhz2E3SHSrUW4eUM&libraries=places&callback=initAutocomplete" async defer></script> -->
+</body>
+</html>
