@@ -89,7 +89,7 @@ async function cityToCoordinates(element, err){
 }
 //toggle units
 let unitToggle = async () => {
-    let element = recentArray[2];
+    let element = document.getElementById('city').innerHTML;
     let data = await (await fetch(`${openCageData.baseurl}q=${element}&key=${openCageData.key}`)).json();
     let lat = data.results[0].geometry.lat;
     let lon = data.results[0].geometry.lng;
