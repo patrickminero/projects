@@ -63,6 +63,8 @@ async function infoRequest(lat, lon, err){
         let data = await(await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${openWeatherApi.key}&units=imperial`)).json();
         let city = cityInfo.results[0].components
         document.getElementById('city').innerHTML = `${city.city}, ${city.country}`;
+        tempSymbol = 'ºF';
+        speedSymbol = 'M/h';
         let hourlyArray = data.hourly.slice(1, 11);
         let dailyArray = data.daily;
         displayCurrent(data.current);
