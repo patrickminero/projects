@@ -186,8 +186,8 @@ let displayCurrent = (obj) =>{
     document.getElementById('current-img').src = src;
     document.getElementById('current-desc').innerHTML = obj.weather[0].description;    
     document.getElementById('current-temp').innerHTML = obj.temp.toFixed(0) + ' ' + tempSymbol;    
-    document.getElementById('current-feels').innerHTML = obj.feels_like.toFixed(0);    
-    document.getElementById('current-wind').innerHTML = obj.wind_speed.toFixed(0);
+    document.getElementById('current-feels').innerHTML = obj.feels_like.toFixed(0) + ' ' + tempSymbol;    
+    document.getElementById('current-wind').innerHTML = obj.wind_speed.toFixed(0) + ' ' + speedSymbol;
 }
 //display hourly information
 class displayHourly{
@@ -314,13 +314,13 @@ let sideNav = document.getElementById('side-nav');
 
 let menuToggle = () =>{
     if(sideNav.style.display === 'block'){
-        gsap.to('#side-nav', {display: 'none', opacity: 0, width: '0vw', duration: 1, ease: 'back'})
+        gsap.to('#side-nav', {display: 'none', opacity: 0, width: 0, duration: 1, ease: 'back'})
         gsap.to('#top', {rotate: -360, y: 0, backgroundColor: 'white', duration: 1});
         gsap.to('#bottom', {rotate: 360, y: 0, backgroundColor: 'white', duration: 1}); 
         gsap.to('#middle', {opacity: 1, duration: 1, backgroundColor: 'white'})
         gsap.to('body', {overflow: 'initial', duration: 1})
     }else{
-        gsap.to('#side-nav', {display: 'block', opacity: 1, width: '85vw', duration: 1, ease: 'back'})
+        gsap.to('#side-nav', {display: 'block', opacity: 1, width: 300, duration: 1, ease: 'back'})
         gsap.to('#middle', {opacity: 0, backgroundColor: '#fff', duration: 1});    
         gsap.to('#top', {rotate: 405, y: 16, backgroundColor: '#fff', duration: 1});    
         gsap.to('#bottom', {rotate: -405, y: -14, backgroundColor: '#fff', duration: 1});    
