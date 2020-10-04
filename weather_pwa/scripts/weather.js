@@ -1,11 +1,5 @@
 //apis info
-// google autocomplete
-let autocomplete;
-function initAutocomplete(){
-    autocomplete = new google.maps.places.Autocomplete(
-        document.getElementById('autocomplete')
-    )
-};
+
 
 let openWeatherApi = {
     key: 'bb8fffb77c233d3391006cd4611ceda9',
