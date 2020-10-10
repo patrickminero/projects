@@ -1,6 +1,4 @@
 //apis info
-
-
 let openWeatherApi = {
     key: 'bb8fffb77c233d3391006cd4611ceda9',
     baseurl: 'https://api.openweathermap.org/data/2.5/',
@@ -18,7 +16,8 @@ let submitButton = document.getElementById('submit-button');
 let currentIcon;
 let metric = false;
 let tempSymbol = 'ºF';
-let speedSymbol = 'M/h';
+let speedSymbol = 'M/H';
+
 //clear past data
 let clearData = () =>{
     let hourDivList = document.querySelectorAll('#hourly-weather div');
@@ -64,7 +63,7 @@ async function infoRequest(lat, lon, err){
         let city = cityInfo.results[0].components
         document.getElementById('city').innerHTML = `${city.city}, ${city.country}`;
         tempSymbol = 'ºF';
-        speedSymbol = 'M/h';
+        speedSymbol = 'M/H';
         let hourlyArray = data.hourly.slice(1, 11);
         let dailyArray = data.daily;
         displayCurrent(data.current);
@@ -110,7 +109,7 @@ let unitToggle = async () => {
     }else{
         metric = false
         tempSymbol = 'ºF';
-        speedSymbol = 'M/h';
+        speedSymbol = 'M/H';
         document.querySelector('#units a').innerHTML = 'Change to metric';
         infoRequest(lat, lon);
         clearData();
