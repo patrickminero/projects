@@ -97,7 +97,7 @@ let unitToggle = async () => {
     if(metric === false){
         metric = true;
         tempSymbol = 'ºC';
-        speedSymbol = 'K/h';
+        speedSymbol = 'mts/s';
         document.querySelector('#units a').innerHTML = 'Change to Imperial';
         let metricData = await(await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${openWeatherApi.key}&units=metric`)).json();
         let hourlyArray = metricData.hourly.slice(1, 11);
